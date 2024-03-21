@@ -17,6 +17,8 @@ function createGrid(gridSize) {
     newGrids = [];
     for (i = 0; i < gridSize*gridSize; i++) {        
         newGrids[i] = document.createElement("div");
+        newGrids[i].style.height = `calc(100% / ${gridSize})`;
+        newGrids[i].style.width = `calc(100% / ${gridSize})`;
         newGrids[i].classList.add('grids');
         board.appendChild(newGrids[i]);
     }
