@@ -12,6 +12,7 @@ gridInput.addEventListener('click', () => {
 });
 
 
+
 function createGrid(gridSize) {
     board.innerHTML = '';
     newGrids = [];

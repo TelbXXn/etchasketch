@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    background-color:blanchedalmond;
+    background-color:rgb(84, 61, 25);
 }
 
 .grids {
@@ -15,9 +15,15 @@
 #playground {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid red;
+    border: 10px solid black;
     justify-content: space-around;
     height: 400px;
     width: 400px;
 
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
