@@ -4,12 +4,10 @@
 }
 
 .grids {    
-    flex: 1 0 auto;
     margin: 0;
     padding: 0;
     background-color:white;
     border: 1px solid black;
-
 }
 
 button {

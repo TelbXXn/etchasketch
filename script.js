@@ -6,12 +6,20 @@ const gridInput = document.querySelector('#gridsize');
 const board = document.querySelector('#playground');
 
 gridInput.addEventListener('click', () => {
-    gridSize = +prompt('What size grid would you like?', );
+    gridSize = prompt('What size grid would you like? Must be between 2 and 100', );
+    if (gridSize === null) {
+            return;
+    }
+    while (gridSize < 2 || gridSize > 100){
+        gridSize = prompt('Invalid... must be between 2 and 100', );
+        if (gridSize === null) {
+            return;
+        }
+    } 
+    gridSize = +gridSize;
     createGrid(gridSize);
 
 });
-
-
 
 function createGrid(gridSize) {
     board.innerHTML = '';
