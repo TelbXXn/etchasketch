@@ -17,12 +17,17 @@ function createGrid(gridSize) {
     board.innerHTML = '';
     newGrids = [];
     for (i = 0; i < gridSize*gridSize; i++) {        
-        newGrids[i] = document.createElement("div");
-        newGrids[i].style.height = `calc(100% / ${gridSize})`;
-        newGrids[i].style.width = `calc(100% / ${gridSize})`;
-        newGrids[i].classList.add('grids');
-        board.appendChild(newGrids[i]);
+        let gridItem = document.createElement("div");
+        gridItem.style.height = `calc(100% / ${gridSize})`;
+        gridItem.style.width = `calc(100% / ${gridSize})`;
+        gridItem.classList.add('grids');
+        gridItem.addEventListener('mouseover', () => {
+            gridItem.style.backgroundColor = "black";
+        });
+        board.appendChild(gridItem);
+        newGrids.push(gridItem);
     }
 }
 
 createGrid(gridSize);
+
